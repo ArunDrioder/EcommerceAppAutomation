@@ -41,6 +41,12 @@ public class BaseTest
         if (browserName.contains("chrome"))
         {
             ChromeOptions options = new ChromeOptions();
+// Comment or remove the headless argument
+// options.addArguments("--headless");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--start-maximized");
+
+
             WebDriverManager.chromedriver().setup();
            if (browserName.contains("headless"))
            {
